@@ -1,6 +1,4 @@
-@import './variables';
-
-
+@import "./variables";
 
 .projects-container {
   display: flex;
@@ -14,12 +12,10 @@
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;
-  gap: 2rem;
+  gap: 2rem !important;
   @media screen and (max-width: 1024px) {
     justify-content: center;
   }
-    
-  
 }
 
 .projects {
@@ -28,7 +24,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 6rem;
+  padding-top: 3rem;
 
   .project-card {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -55,9 +51,9 @@
       }
 
       p {
-        font-size: 1rem;
+        font-size: 1.5rem;
         @media screen and (max-width: 1024px) {
-          font-size: 0.8em;
+          font-size: 1em;
         }
         line-height: 1.4;
         overflow-y: hidden;

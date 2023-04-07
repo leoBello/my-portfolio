@@ -33,6 +33,10 @@ a {
 // applique un pading left et right de 20% en rem
 .container {
   padding: 0 $container-padding;
+  @media screen and (max-width: 500px) {
+    padding: 0 $container-padding-mobile;
+  }
+    
   display: flex;
   align-items: center;
   
