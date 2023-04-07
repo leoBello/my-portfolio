@@ -8,12 +8,17 @@
   top: 0;
   color: white;
   background: rgba(0, 0, 0, 0.5);
+  
 
   ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     gap: 3rem;
+
+    a {
+      font-family: "Orbitron", sans-serif;
+    }
   }
 }
 
