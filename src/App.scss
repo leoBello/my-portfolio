@@ -34,15 +34,18 @@ a {
 
 // Police pour les titres (header)
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-family: "Orbitron", sans-serif;
   font-size: 3em !important;
   @media screen and (max-width: 1024px) {
     font-size: 2em !important;
+  }
+}
+
+h3 {
+  font-size: 2em ;
+  @media screen and (max-width: 1024px) {
+    font-size: 1em !important;
   }
 }
 
