@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import logo from './logo.svg';
 import './App.scss';
+import 'font-awesome/css/font-awesome.min.css';
 
 function App() {
   return (

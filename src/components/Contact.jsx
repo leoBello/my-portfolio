@@ -10,28 +10,28 @@ const Contact = () => {
           </div>
           <div className="contact-buttons">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/leoBello"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-github"
+              className="btn btn-github"
             >
-              GitHub
+              <i className="fa fa-github"></i> GitHub
             </a>
             <a
-              href="https://www.malt.fr/profile/yourusername"
+              href="https://www.malt.fr/profile/leobello"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-malt"
+              className="btn btn-malt"
             >
-              Malt
+              <i className="fa fa-beer"></i> Malt
             </a>
             <a
-              href="https://www.linkedin.com/in/yourusername/"
+              href="https://www.linkedin.com/in/leobellolinkedurl/"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-linkedin"
+              className="btn btn-linkedin"
             >
-              LinkedIn
+              <i className="fa fa-linkedin"></i> LinkedIn
             </a>
           </div>
         </div>
