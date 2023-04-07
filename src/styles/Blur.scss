@@ -1,0 +1,15 @@
+.blur-bottom {
+    width: 100%;
+    bottom: 0;
+    height: 16rem;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(255, 75, 244, 0), #420C41)
+}
+
+.blur-top {
+    width: 100%;
+    top: 0;
+    height: 16rem;
+    position: absolute;
+    background-image: linear-gradient(to top, rgba(255, 75, 244, 0), #420C41)
+}

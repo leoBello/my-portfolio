@@ -1,5 +1,6 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
+import { BlurBottom } from "./Blur";
 
 // const TypingText = ({ text }) => {
 //   const displayText = useTypewriter(text);
@@ -42,6 +43,7 @@ const About = () => {
           >
           </TypeAnimation>
         </div>
+        <BlurBottom />  
       </div>
     </section>
   );
