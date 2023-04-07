@@ -3,6 +3,10 @@
 @import './styles/Projects';
 @import './styles/Contact';
 
+:root {
+  // dark scroll bar
+  color-scheme: dark;
+}
 
 * {
   box-sizing: border-box;
