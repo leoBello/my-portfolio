@@ -1,3 +1,5 @@
+@import './variables';
+
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -16,7 +18,7 @@
 
 .projects {
   // background-image: url("../../public/projects_background.png");
-  background-color: #420c41;
+  background-color: $gradient-color;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
