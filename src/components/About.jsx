@@ -1,27 +1,4 @@
-import React, { useEffect, useState } from 'react';
-
-const TypingText = ({ text }) => {
-  const [displayText, setDisplayText] = useState('');
-
-  useEffect(() => {
-    let index = 0;
-    const typingInterval = setInterval(() => {
-      setDisplayText((prevDisplayText) => prevDisplayText + text.charAt(index));
-      index++;
-
-      if (index > text.length) {
-        clearInterval(typingInterval);
-      }
-    }, 60); // Vitesse de frappe (en ms)
-
-    return () => {
-      clearInterval(typingInterval);
-    };
-  }, [text]);
-
-  return <span className="typing-text">{displayText}</span>;
-};
-
+import React from "react";
 
 const About = () => {
   return (
