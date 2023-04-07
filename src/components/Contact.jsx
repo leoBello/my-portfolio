@@ -1,10 +1,7 @@
 import React from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useState } from "react";
-
+import { ClipboardCopy } from "./CopyTextToClipboard";
 const Contact = () => {
-  const { copied, setCopied } = useState(false);
-  const { value, setValue } = useState("");
   return (
     <section id="contact" className="contact">
       <div className="container contact-container">
@@ -40,10 +37,8 @@ const Contact = () => {
             >
               <i className="fa fa-linkedin"></i> LinkedIn
             </a>
-            <CopyToClipboard text={value} onCopy={() => setCopied(true)}>
-              <span className="mail">leobello.wd@gmail.com</span>
-            </CopyToClipboard>
-            {copied ? <span style={{ color: "red" }}>Copied.</span> : null}
+            <ClipboardCopy copyText="leobello.wd@gmail.com" />
+            {/* {copied ? <span style={{ color: "red" }}>Copied.</span> : null} */}
           </div>
         </div>
       </div>
