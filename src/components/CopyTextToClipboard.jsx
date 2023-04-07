@@ -9,6 +9,7 @@ export async function copyTextToClipboard(text) {
 }
 
 export function ClipboardCopy({ copyText }) {
+  // eslint-disable-next-line no-unused-vars  
   const [isCopied, setIsCopied] = useState(false);
 
   // This is the function we wrote earlier

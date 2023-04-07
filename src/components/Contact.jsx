@@ -1,6 +1,6 @@
 import React from "react";
-import { useState } from "react";
 import { ClipboardCopy } from "./CopyTextToClipboard";
+
 const Contact = () => {
   return (
     <section id="contact" className="contact">
