@@ -5,7 +5,7 @@ import { BlurBottom } from "./Blur";
 const text1 = `Développeur web passionné et spécialisé en JavaScript, React et Node.js,\n j'ai plusieurs années d'expérience freelance à mon actif.\n`;
 const text2 = `Mes compétences solides en conception et réalisation de projets web innovants sont renforcées par mon souci constant de la qualité du code, de l'ergonomie et de l'expérience utilisateur.\n`;
 const text3 = `Toujours en quête de défis et d'opportunités, je vise à enrichir mon savoir-faire et contribuer à la réussite de projets ambitieux.\n`
-const text4 = `Mon but : créer des applications web performantes et attrayantes, répondant aux exigences des clients et des utilisateurs\n`;
+const text4 = `Mon but : créer des applications web performantes et attrayantes, répondant aux exigences des clients et des utilisateurs.`;
 
 const About = () => {
   return (
