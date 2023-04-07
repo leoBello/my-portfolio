@@ -2,24 +2,10 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { BlurBottom } from "./Blur";
 
-// const TypingText = ({ text }) => {
-//   const displayText = useTypewriter(text);
-
-//   return <span>{displayText}</span>;
-// };
-
-const text2 = `Je suis constamment à la recherche de nouveaux défis et de
-nouvelles opportunités pour enrichir mon savoir-faire et
-contribuer à la réussite de projets ambitieux. Mon objectif est de
-créer des applications web efficaces et esthétiques, qui répondent
-aux besoins des clients et des utilisateurs.`;	
-
-const text = `Je suis un développeur web passionné, spécialisé en JavaScript,
-React et Node.js. Fort d'une expérience de plusieurs années en tant
-que freelance, j'ai acquis des compétences solides dans la
-conception et la réalisation de projets web variés et innovants.
-J'attache une grande importance à la qualité du code, à l'ergonomie
-et à l'expérience utilisateur.`;
+const text1 = `Développeur web passionné et spécialisé en JavaScript, React et Node.js,\n j'ai plusieurs années d'expérience freelance à mon actif.\n`;
+const text2 = `Mes compétences solides en conception et réalisation de projets web innovants sont renforcées par mon souci constant de la qualité du code, de l'ergonomie et de l'expérience utilisateur.\n`;
+const text3 = `Toujours en quête de défis et d'opportunités, je vise à enrichir mon savoir-faire et contribuer à la réussite de projets ambitieux.\n`
+const text4 = `Mon but : créer des applications web performantes et attrayantes, répondant aux exigences des clients et des utilisateurs\n`;
 
 const About = () => {
   return (
@@ -29,21 +15,25 @@ const About = () => {
         <div className="about-content">
           <TypeAnimation
             sequence={[
-              text, 
-              1000, 
-              `${text} ${text2}`, 
+              text1,
+              600,
+              `${text1}${text2}`,
+              800,
+              `${text1}${text2}${text3}`,
+              700,
+              `${text1}${text2}${text3}${text4}`,
               () => {
-                console.log("Sequence completed"); 
+                console.log("Sequence completed");
               },
             ]}
             wrapper="span"
             cursor={true}
-            speed={70}
+            speed={85}
+            className="animated-text"
             // style={{ fontSize: "2em", display: "inline-block" }}
-          >
-          </TypeAnimation>
+          ></TypeAnimation>
         </div>
-        <BlurBottom />  
+        <BlurBottom />
       </div>
     </section>
   );
