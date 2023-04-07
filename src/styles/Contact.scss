@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-flow: column wrap;
+  gap: 2em;
+  height: 100%;
+  justify-content: center;
 }
 
 .contact {
@@ -37,28 +41,31 @@
   padding: 0.5rem 1rem;
   font-size: 1rem;
   text-decoration: none;
-//   border: 2px solid #ccc;
+  //   border: 2px solid #ccc;
   border-radius: 4px;
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: #EE30E9;
+    background-color: #ee30e9;
     color: #fff;
   }
+}
+.title-container {
+  width: 100%;
 }
 
 .btn-github i,
 .btn-malt i,
 .btn-linkedin i {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   font-size: 2rem;
 }
 
 .btn-github,
 .btn-malt,
 .btn-linkedin {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .btn-malt {
@@ -69,3 +76,7 @@
   // Styles spécifiques au bouton LinkedIn
 }
 
+.mail {
+  font-family: "Orbitron", sans-serif;
+  cursor: pointer;
+}

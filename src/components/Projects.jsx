@@ -19,7 +19,9 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <div className="container projects-container">
-        <h2 className="projects-title">Projets</h2>
+        <div className="title-container">
+          <h3 className="projects-title">Projets</h3>
+        </div>
         <div className="projects-grid">
           <ProjectCard
             image="card4.png"
