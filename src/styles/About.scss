@@ -1,0 +1,33 @@
+.about {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  padding: 2rem 0;
+  background-image: url("../../public/about_background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: rgb(227, 238, 255);
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .about-content {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: justify;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+}
