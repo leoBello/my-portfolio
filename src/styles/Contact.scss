@@ -1,0 +1,57 @@
+.contact-container {
+    background-image: url("../../public/contact_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.contact {
+}
+
+.contact-content {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.contact-photo img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 14px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-github,
+.btn-malt,
+.btn-linkedin {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #ccc;
+    color: #fff;
+  }
+}
+
+.btn-github {
+  // Styles spécifiques au bouton GitHub
+}
+
+.btn-malt {
+  // Styles spécifiques au bouton Malt
+}
+
+.btn-linkedin {
+  // Styles spécifiques au bouton LinkedIn
+}
