@@ -84,7 +84,12 @@
   background: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   padding: 0.5em 0.5em;
-  
+
+  &:hover {
+    background-color: #ee30e9;
+    color: #fff;
+  }
+
   p {
     font-family: "Orbitron", sans-serif;
   }
