@@ -27,7 +27,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="btn btn-malt"
             >
-              <i className="fa fa-beer"></i> Malt
+              <i className="fa fa-star"></i> Malt
             </a>
             <a
               href="https://www.linkedin.com/in/leobellolinkedurl/"
