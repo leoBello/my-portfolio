@@ -1,18 +1,15 @@
 @import './variables';
 
 .projects-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
 }
 .title-container {
   width: 100%;
+  margin-bottom: 2rem;
 }
 .projects-grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-flow: row wrap;
   gap: 2rem;
 }
 
@@ -28,8 +25,9 @@
     cursor: pointer;
     transition: transform 0.3s;
     background: rgba(0, 0, 0, 0.5);
-    max-width: 25%;
-    height: fit-content;
+    width: $card-width;
+    min-width: $card-width;
+    height: $card-height;
     border-radius: 6px;
 
     img {

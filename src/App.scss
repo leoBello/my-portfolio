@@ -32,7 +32,7 @@ a {
 
 // applique un pading left et right de 20% en rem
 .container {
-  padding: 0 20%;
+  padding: 0 $container-padding;
   height: 100vh;
 }
 
