@@ -12,7 +12,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  // height: 100vh;
+  height: var(--window-height);
   color: rgb(227, 238, 255);
 
   .section-title {
