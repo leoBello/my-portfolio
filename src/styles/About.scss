@@ -21,7 +21,9 @@
     margin-bottom: 1rem;
     width: 100%;
     margin-top: 3rem;
-    text-align: center;
+    @media screen and (max-width: 1024px) {
+      text-align: center;
+    }
   }
 
   .about-content {
