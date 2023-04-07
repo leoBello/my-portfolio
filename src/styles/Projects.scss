@@ -1,6 +1,10 @@
 @import './variables';
 
+
+
 .projects-container {
+  display: flex;
+  flex-direction: column;
 }
 .title-container {
   width: 100%;
@@ -24,6 +28,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 6rem;
 
   .project-card {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

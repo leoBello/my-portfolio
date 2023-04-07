@@ -4,11 +4,10 @@ import { BlurTop } from "./Blur";
 
 const Contact = () => {
   return (
-       
-      <section id="contact" className="contact">
+    <section id="contact" className="contact">
       <BlurTop />
-        <div className="container contact-container">
-        
+      <div className="container">
+        <div className="contact-container">
           <div className="title-container">
             <h3 className="projects-title">Contact</h3>
           </div>
@@ -46,7 +45,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   );
 };
 
