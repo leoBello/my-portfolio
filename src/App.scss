@@ -33,7 +33,7 @@ a {
 // applique un pading left et right de 20% en rem
 .container {
   padding: 0 $container-padding;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 // Police pour les titres (header)
