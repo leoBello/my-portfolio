@@ -1,4 +1,11 @@
 import React from "react";
+import useTypewriter from 'react-typewriter-hook';
+
+const TypingText = ({ text }) => {
+  const displayText = useTypewriter(text);
+
+  return <span>{displayText}</span>;
+};
 
 const About = () => {
   return (
@@ -16,11 +23,12 @@ const About = () => {
           </p>
           <br />
           <p className="about-text">
+            <TypingText text="
             Je suis constamment à la recherche de nouveaux défis et de nouvelles
             opportunités pour enrichir mon savoir-faire et contribuer à la
             réussite de projets ambitieux. Mon objectif est de créer des
             applications web efficaces et esthétiques, qui répondent aux besoins
-            des clients et des utilisateurs.
+            des clients et des utilisateurs." className="cursor"/>
           </p>
         </div>
       </div>
