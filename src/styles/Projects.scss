@@ -72,3 +72,11 @@
     }
   }
 }
+
+.project-link {
+  // restaure underline on link
+  text-decoration: underline !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}

@@ -29,6 +29,10 @@
 #contact {
   position: relative;
   background-image: url("../../public/contact_background2.png");
+  // cover
+  background-size: cover;
+  // contain
+  background-repeat: no-repeat;
 }
 
 .contact-content {
