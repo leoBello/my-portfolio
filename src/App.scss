@@ -3,9 +3,7 @@
 @import "./styles/Projects";
 @import "./styles/Contact";
 @import "./styles/Blur";
-@import './styles/variables.scss';
-
-
+@import "./styles/variables.scss";
 
 :root {
   // dark scroll bar
@@ -36,16 +34,17 @@ a {
   @media screen and (max-width: 500px) {
     padding: 0 $container-padding-mobile;
   }
-    
+
   display: flex;
   align-items: center;
+
   
   @media screen and (min-width: 1024px) {
-    // min-height: 100vh;
-    min-height: var(--window-height);
+    min-height: 100vh;
+    @media screen and (max-height: 720px) {
+      min-height: var(--window-height);
+    }
   }
-    
-
 }
 
 // Police pour les titres (header)
