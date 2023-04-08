@@ -9,8 +9,6 @@ export async function copyTextToClipboard(text) {
 }
 
 export function ClipboardCopy({ copyText }) {
-  // eslint-disable-next-line no-unused-vars
-  const [isCopied, setIsCopied] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
@@ -35,11 +33,8 @@ export function ClipboardCopy({ copyText }) {
     copyTextToClipboard(copyText)
       .then(() => {
         // If successful, update the isCopied state value
-        setIsCopied(true);
         setIsClicked(true);
-        setTimeout(() => {
-          setIsCopied(false);
-        }, 2000);
+        setTimeout(() => {}, 2000);
       })
       .catch((err) => {
         console.log(err);
@@ -48,14 +43,14 @@ export function ClipboardCopy({ copyText }) {
 
   return (
     <div>
-      {/* <input className="mail" type="text" value={copyText} readOnly /> */}
       <div className="mail" onClick={handleCopyClick}>
         <p>{!isClicked ? copyText : "Mail copié ! "}</p>
-        { !isClicked && <span>
-          <i className="fa fa-copy"></i>
-        </span>}
+        {!isClicked && (
+          <span>
+            <i className="fa fa-copy"></i>
+          </span>
+        )}
       </div>
-      {/* Bind our handler function to the onClick button property */}
     </div>
   );
 }
