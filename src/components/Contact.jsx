@@ -17,12 +17,12 @@ const Contact = () => {
             </div>
             <div className="contact-buttons">
               <a
-                href="https://github.com/leoBello"
+                href="https://www.linkedin.com/in/leobellolinkedurl/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-github"
+                className="btn btn-linkedin"
               >
-                <i className="fa fa-github"></i> GitHub
+                <i className="fa fa-linkedin"></i> LinkedIn
               </a>
               <a
                 href="https://www.malt.fr/profile/leobello"
@@ -33,12 +33,12 @@ const Contact = () => {
                 <i className="fa fa-star"></i> Malt
               </a>
               <a
-                href="https://www.linkedin.com/in/leobellolinkedurl/"
+                href="https://github.com/leoBello"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-linkedin"
+                className="btn btn-github"
               >
-                <i className="fa fa-linkedin"></i> LinkedIn
+                <i className="fa fa-github"></i> GitHub
               </a>
               <ClipboardCopy copyText="leobello.wd@gmail.com" />
               {/* {copied ? <span style={{ color: "red" }}>Copied.</span> : null} */}
