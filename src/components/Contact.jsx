@@ -41,7 +41,6 @@ const Contact = () => {
                 <i className="fa fa-github"></i> GitHub
               </a>
               <ClipboardCopy copyText="leobello.wd@gmail.com" />
-              {/* {copied ? <span style={{ color: "red" }}>Copied.</span> : null} */}
             </div>
           </div>
         </div>
