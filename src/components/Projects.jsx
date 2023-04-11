@@ -39,26 +39,26 @@ const Projects = () => {
         </div>
         <div className="projects-grid">
           <ProjectCard
-            image="card4.png"
+            image="card1-1.png"
             title="Yooz"
             description="Evol et maintance sur un projet de gestion de factures éléctroniques, développement de nouvelles features"
             onClick={handleCardClick}
           />
           <ProjectCard
-            image="card2.png"
+            image="card2-1.png"
             title="Amilnote"
             description="Projet de gestions des collaborateurs, des notes de frais et des congés de l'entreprise Amiltone"
             onClick={handleCardClick}
           />
           <ProjectCard
-            image="card1.png"
+            image="card3-1.png"
             title="CP 2022 - 2023"
             description="2 sites web pour le chateau perché festival"
             onClick={handleCardClick}
             links={cpLinks}
           />
           <ProjectCard
-            image="card3.png"
+            image="card4-1.png"
             title="Safran"
             description="Outils de gestion du réseau élécrtrique français de l'entreprise RTE"
             onClick={handleCardClick}
