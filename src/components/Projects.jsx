@@ -1,35 +1,21 @@
 import React from "react";
 
-const ProjectCard = ({ image, title, description, onClick, links }) => (
-  <div className="project-card" onClick={onClick}>
-    <img src={image} alt={title} />
-    <div className="project-info">
-      <h3>{title}</h3>
-      <p>{description}</p>
-      {links && links.map(link => {
-        return (
-          <p><a className="project-link" href={link.target} target="_blank" rel="noopener noreferrer">{link.name}</a></p>
-        )
-      })}
-    </div>
-  </div>
-);
-
 const Projects = () => {
   const handleCardClick = () => {
     // Ici, vous pouvez gérer les actions à effectuer lors du clic sur une carte
     console.log("Carte cliquée");
   };
 
-  const cpLinks = [{
-    name: "Edition 2022",
-    target: "https://cp2022-web-site.vercel.app/"
-  },
-  {
-    name: "Edition 2023",
-    target: "https://www.chateauperche.com/"
-  }];
-
+  const cpLinks = [
+    {
+      name: "Edition 2022",
+      target: "https://cp2022-web-site.vercel.app/",
+    },
+    {
+      name: "Edition 2023",
+      target: "https://www.chateauperche.com/",
+    },
+  ];
 
   return (
     <section id="projects" className="projects">
@@ -68,5 +54,38 @@ const Projects = () => {
     </section>
   );
 };
+
+const ProjectCard = ({ image, title, description, onClick, links }) => (
+  <div className="card-container" onClick={onClick}>
+    <div class="card">
+      <div class="front">
+        <img src={image} alt={title} />
+        <div className="project-info">
+      <h3>{title}</h3>
+      <p>{description}</p>
+      {links &&
+        links.map((link) => {
+          return (
+            <p>
+              <a
+                className="project-link"
+                href={link.target}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.name}
+              </a>
+            </p>
+          );
+        })}
+    </div>
+      </div>
+      <div class="back">
+        <h1>Back of Card</h1>
+        <p>Additional info on the back of the card</p>
+      </div>
+    </div>
+  </div>
+);
 
 export default Projects;
