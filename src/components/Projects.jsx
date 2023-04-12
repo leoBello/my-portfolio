@@ -141,7 +141,13 @@ const ProjectCard = ({
         </div>
         <h3>Tâches</h3>
         <div className="taches-container">
-          {taches && taches.map((tache) => <p>{tache}</p>)}
+          {taches &&
+            taches.map((tache) => (
+              <div className="tache-line">
+                <img src="arrow.png" alt="arrow" className="arrow-img" />
+                <p>{tache}</p>
+              </div>
+            ))}
         </div>
       </div>
     </div>
