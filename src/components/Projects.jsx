@@ -35,16 +35,14 @@ const Projects = () => {
             title="Yooz"
             description="Evol et maintance sur un projet de gestion de factures éléctroniques, développement de nouvelles features, Angular / NodeJS"
             onClick={handleCardClick}
-            techno1={technos.angular}
-            techno2={technos.nodejs}
+            technos={[technos.angular, technos.nodejs]}
           />
           <ProjectCard
             image="card2-1.png"
             title="Amilnote"
             description="TMA sur un Projet de gestion des collaborateurs, des notes de frais et des congés de l'entreprise Amiltone, React / NodeJS"
             onClick={handleCardClick}
-            techno1={technos.react}
-            techno2={technos.nodejs}
+            technos={[technos.react, technos.nodejs]}
           />
           <ProjectCard
             image="card3-1.png"
@@ -52,15 +50,14 @@ const Projects = () => {
             description="2 sites web pour le chateau perché festival en React : "
             onClick={handleCardClick}
             links={cpLinks}
-            techno1={technos.react}
+            technos={[technos.react]}
           />
           <ProjectCard
             image="card4-1.png"
             title="Safran"
             description="Outil de gestion du réseau éléctrique français de l'entreprise RTE, Java EE Angular"
             onClick={handleCardClick}
-            techno1={technos.angular}
-            techno2={technos.nodejs}
+            technos={[technos.angular, technos.nodejs]}
           />
         </div>
       </div>
@@ -74,8 +71,7 @@ const ProjectCard = ({
   description,
   onClick,
   links,
-  techno1,
-  techno2,
+  technos,
 }) => (
   <div className="card-container" onClick={onClick}>
     <div class="card">
@@ -104,12 +100,10 @@ const ProjectCard = ({
       <div class="back">
         <h3>Technos</h3>
         <div className="techno-img-container">
-          {techno1 && (
-            <img src={techno1} alt="techno-logo" className="techno-img" />
-          )}
-          {techno2 && (
-            <img src={techno2} alt="techno-logo" className="techno-img" />
-          )}
+          {technos &&
+            technos.map((techno) => (
+              <img src={techno} alt="techno-logo" className="techno-img" />
+            ))}
         </div>
         <h3>Tâches</h3>
         <p>placeholder</p>
