@@ -81,7 +81,7 @@ const ProjectCard = ({ image, title, description, onClick, links }) => (
     </div>
       </div>
       <div class="back">
-        <h1>Back of Card</h1>
+        <h3>Back of Card</h3>
         <p>Additional info on the back of the card</p>
       </div>
     </div>
