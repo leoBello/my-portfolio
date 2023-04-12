@@ -160,15 +160,17 @@
       font-size: 1.5em;
       margin: 0.5rem;
     }
+    .taches-container {
+      padding: 0.5rem;
+    }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       @media screen and (max-width: 1024px) {
-        font-size: 1em;
+        font-size: 0.8rem;
       }
       line-height: 1.4;
       overflow-y: hidden;
-      padding: 0 0.5em;
     }
   }
 }

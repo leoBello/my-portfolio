@@ -23,6 +23,35 @@ const Projects = () => {
     angular: "angular.png",
   };
 
+  const taches = {
+    yooz: [
+      "Evolution et maintenance du projet",
+      "Développement de nouvelles features",
+      "Développement de tests unitaires",
+      "Chiffrage des tâches",
+      "Rédaction de la documentation technique",
+    ],
+    Amilnote: [
+      "Evolution et maintenance du projet",
+      "Développement de nouvelles features",
+      "Développement de tests unitaires",
+      "Rédaction de la documentation technique",
+    ],
+    cp: [
+      "Realisation de la maquette",
+      "Développement du site web",
+      "Realisation d'un jeu (quiz) avec animations",
+    ],
+    safran: [
+      "Evolution et maintenance du projet",
+      "Développement de nouvelles features",
+      "Développement de tests unitaires",
+      "Chiffrage des tâches",
+      "Rédaction de la documentation technique",
+      "Rédaction des user stories",
+    ],
+  };
+
   return (
     <section id="projects" className="projects">
       <div className="container projects-container">
@@ -36,6 +65,7 @@ const Projects = () => {
             description="Evol et maintance sur un projet de gestion de factures éléctroniques, développement de nouvelles features, Angular / NodeJS"
             onClick={handleCardClick}
             technos={[technos.angular, technos.nodejs]}
+            taches={taches.yooz}
           />
           <ProjectCard
             image="card2-1.png"
@@ -43,6 +73,7 @@ const Projects = () => {
             description="TMA sur un Projet de gestion des collaborateurs, des notes de frais et des congés de l'entreprise Amiltone, React / NodeJS"
             onClick={handleCardClick}
             technos={[technos.react, technos.nodejs]}
+            taches={taches.Amilnote}
           />
           <ProjectCard
             image="card3-1.png"
@@ -51,6 +82,7 @@ const Projects = () => {
             onClick={handleCardClick}
             links={cpLinks}
             technos={[technos.react]}
+            taches={taches.cp}
           />
           <ProjectCard
             image="card4-1.png"
@@ -58,6 +90,7 @@ const Projects = () => {
             description="Outil de gestion du réseau éléctrique français de l'entreprise RTE, Java EE Angular"
             onClick={handleCardClick}
             technos={[technos.angular, technos.nodejs]}
+            taches={taches.safran}
           />
         </div>
       </div>
@@ -72,6 +105,7 @@ const ProjectCard = ({
   onClick,
   links,
   technos,
+  taches,
 }) => (
   <div className="card-container" onClick={onClick}>
     <div class="card">
@@ -106,7 +140,9 @@ const ProjectCard = ({
             ))}
         </div>
         <h3>Tâches</h3>
-        <p>placeholder</p>
+        <div className="taches-container">
+          {taches && taches.map((tache) => <p>{tache}</p>)}
+        </div>
       </div>
     </div>
   </div>
