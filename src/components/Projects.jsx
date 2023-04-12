@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 const Projects = () => {
   const handleCardClick = () => {
@@ -106,52 +106,87 @@ const ProjectCard = ({
   links,
   technos,
   taches,
-}) => (
-  <div className="card-container" onClick={onClick}>
-    <div class="card">
-      <div class="front">
-        <img src={image} alt={title} />
-        <div className="project-info">
-          <h3>{title}</h3>
-          <p>{description}</p>
-          {links &&
-            links.map((link) => {
-              return (
-                <p>
-                  <a
-                    className="project-link"
-                    href={link.target}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {link.name}
-                  </a>
-                </p>
-              );
-            })}
+}) => {
+  const spotlightRef = useRef(null);
+  const [isBackVisible, setIsBackVisible] = useState(false);
+
+
+  useEffect(() => {
+    const handlePointerMove = (pos) => {
+      if (!isBackVisible) return;
+
+      let x = parseInt((pos.clientX / window.innerWidth) * 100);
+      let y = parseInt((pos.clientY / window.innerHeight) * 100);
+
+      if (spotlightRef.current) {
+        spotlightRef.current.style.setProperty("--mouse-x", x + "%");
+        spotlightRef.current.style.setProperty("--mouse-y", y + "%");
+      }
+    };
+
+    if (spotlightRef.current) {
+      document.addEventListener("pointermove", handlePointerMove);
+    }
+
+    return () => {
+      document.removeEventListener("pointermove", handlePointerMove);
+    };
+  }, [isBackVisible, spotlightRef]);
+
+  const handleClick = () => {
+    setIsBackVisible(!isBackVisible);
+   
+  };
+
+  return (
+    <div className="card-container" onMouseMove={handleClick}>
+      <div class="card">
+        <div class="front">
+          <img src={image} alt={title} />
+          <div className="project-info">
+            <h3>{title}</h3>
+            <p>{description}</p>
+            {links &&
+              links.map((link) => {
+                return (
+                  <p>
+                    <a
+                      className="project-link"
+                      href={link.target}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.name}
+                    </a>
+                  </p>
+                );
+              })}
+          </div>
         </div>
-      </div>
-      <div class="back">
-        <h3>Technos</h3>
-        <div className="techno-img-container">
-          {technos &&
-            technos.map((techno) => (
-              <img src={techno} alt="techno-logo" className="techno-img" />
-            ))}
-        </div>
-        <h3>Tâches</h3>
-        <div className="taches-container">
-          {taches &&
-            taches.map((tache) => (
-              <div className="tache-line">
-                <img src="arrow.png" alt="arrow" className="arrow-img" />
-                <p>{tache}</p>
-              </div>
-            ))}
+        <div class="back">
+          <div className="spotlight" ref={spotlightRef}>
+            <h3>Technos</h3>
+            <div className="techno-img-container">
+              {technos &&
+                technos.map((techno) => (
+                  <img src={techno} alt="techno-logo" className="techno-img" />
+                ))}
+            </div>
+            <h3>Tâches</h3>
+            <div className="taches-container">
+              {taches &&
+                taches.map((tache) => (
+                  <div className="tache-line">
+                    <img src="arrow.png" alt="arrow" className="arrow-img" />
+                    <p>{tache}</p>
+                  </div>
+                ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Projects;

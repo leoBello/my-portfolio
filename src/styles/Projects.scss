@@ -26,46 +26,6 @@
   background-size: cover;
   padding-top: 3rem;
 
-  // .project-card {
-  //   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  //   cursor: pointer;
-  //   transition: transform 0.3s;
-  //   background: rgba(0, 0, 0, 0.5);
-  //   width: $card-width;
-  //   min-width: $card-width;
-  //   height: $card-height;
-  //   border-radius: 6px;
-
-  //   img {
-  //     width: 100%;
-  //     height: 250px;
-  //     object-fit: cover;
-  //     border-radius: 6px 6px 0 0;
-  //   }
-
-  //   .project-info {
-  //     min-height: 10rem;
-  //     h3 {
-  //       font-size: 1.5em;
-  //       margin: 0.5rem;
-  //     }
-
-  //     p {
-  //       font-size: 1.2rem;
-  //       @media screen and (max-width: 1024px) {
-  //         font-size: 1em;
-  //       }
-  //       line-height: 1.4;
-  //       overflow-y: hidden;
-  //       padding: 0 0.5em;
-  //     }
-  //   }
-  // }
-
-  // .project-card:hover {
-  //   transform: translateY(-5px);
-  // }
-
   @media (max-width: 768px) {
     .projects-grid {
       gap: 0.5rem;
@@ -140,11 +100,30 @@
     }
   }
 
+  :root {
+    --mouse-x: 0;
+    --mouse-y: 0;
+  }
+
   .back {
     // transform: rotateY(180deg) rotateZ(180deg);
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
+
+    .spotlight {
+      width: 100%;
+      height: 100%;
+      background-color: hsla(0, 0%, 0%, 0.9);
+
+      background: rgb(255, 255, 255);
+      background: radial-gradient(
+        circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(90, 9, 121, 0) 80%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
 
     .techno-img-container {
       display: flex;
@@ -162,6 +141,7 @@
       font-size: 1.5em;
       margin: 0.5rem;
     }
+
     .taches-container {
       padding: 0.5rem;
 
